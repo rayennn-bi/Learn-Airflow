@@ -1,0 +1,7 @@
+Astronomies adalah 
+
+Install Astronomi packeges
+winget install -e --id Astronomer.Astro
+
+run 
+astro dev init
