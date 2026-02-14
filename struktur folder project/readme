@@ -1,0 +1,68 @@
+my-airflow-project/
+├── dags/                          # Folder utama untuk semua DAG files
+│   ├── __init__.py
+│   ├── weather_etl.py             # DAG weather pipeline
+│   ├── sales_etl.py               # DAG sales pipeline
+│   ├── customer_etl.py            # DAG customer pipeline
+│   └── monthly_report.py          # DAG monthly report
+│
+├── plugins/                       # Custom operators, hooks, sensors
+│   ├── __init__.py
+│   ├── operators/
+│   │   ├── __init__.py
+│   │   ├── custom_slack_operator.py
+│   │   └── custom_email_operator.py
+│   ├── hooks/
+│   │   ├── __init__.py
+│   │   └── custom_api_hook.py
+│   └── sensors/
+│       ├── __init__.py
+│       └── custom_file_sensor.py
+│
+├── include/                       # Helper functions, utilities, configs
+│   ├── __init__.py
+│   ├── sql/                       # SQL query files
+│   │   ├── create_tables.sql
+│   │   ├── extract_sales.sql
+│   │   └── transform_data.sql
+│   ├── utils/                     # Utility functions
+│   │   ├── __init__.py
+│   │   ├── data_quality.py
+│   │   ├── notifications.py
+│   │   └── transformations.py
+│   └── config/                    # Configuration files
+│       ├── __init__.py
+│       ├── settings.py
+│       └── constants.py
+│
+├── tests/                         # Unit tests untuk DAGs
+│   ├── __init__.py
+│   ├── dags/
+│   │   ├── test_weather_etl.py
+│   │   └── test_sales_etl.py
+│   └── plugins/
+│       └── test_custom_operators.py
+│
+├── data/                          # Sample data untuk testing
+│   ├── raw/
+│   │   ├── sample_sales.csv
+│   │   └── sample_customers.json
+│   └── processed/
+│       └── cleaned_sales.csv
+│
+├── logs/                          # Airflow logs (auto-generated)
+│   └── .gitkeep
+│
+├── config/                        # Airflow configuration
+│   └── airflow.cfg               # Airflow config file (optional)
+│
+├── docker/                        # Docker-related files
+│   ├── Dockerfile
+│   └── docker-compose.yml
+│
+├── .env                          # Environment variables
+├── .env.example                  # Template untuk environment variables
+├── .gitignore                    # Git ignore rules
+├── requirements.txt              # Python dependencies
+├── README.md                     # Project documentation
+└── setup.py                      # Package setup (optional)
